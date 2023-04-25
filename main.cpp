@@ -60,13 +60,13 @@ void findAnswer(std::vector<char>& scores, std::vector<std::vector<long int> >& 
         }
     }
     
-    std::cout << "\n\n| ";
+    std::cout << "\n| ";
 
     for (int i = answer.size()-1; i >= 0; i--)
     {
         std::cout << answer[i] << " | ";
     }
-    std::cout << "\nTotal: " << total << "\n"; 
+    std::cout << "\nTotal: " << total << "\n\n"; 
     
 
     return;
@@ -138,14 +138,15 @@ void findMaxSumSeq(std::vector<char>& scores, std::vector<std::vector<long int> 
         }
     }
     
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < scores.size(); j++)
-        {
-            std::cout << scoreboard[i][j] << "\t";
-        }
-        std::cout << "\n\n\n";
-    }
+    // Print out the 2D vector
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     for (int j = 0; j < scores.size(); j++)
+    //     {
+    //         std::cout << scoreboard[i][j] << "\t";
+    //     }
+    //     std::cout << "\n\n\n";
+    // }
 
     // Call the function to print the innings, scores, and total
     findAnswer(scores, scoreboard);
